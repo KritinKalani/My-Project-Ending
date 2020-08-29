@@ -11,7 +11,7 @@ class Coin{
     }
     display(){
         var pos = this.body.position;
-        fill(0);
+        fill(255,153,0);
         ellipseMode(RADIUS);
         ellipse(pos.x,pos.y,15,15);
     }

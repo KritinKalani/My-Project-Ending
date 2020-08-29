@@ -1,6 +1,6 @@
 class Player{
-    constructor(){
-        this.body = Bodies.rectangle(50,400,50,50);
+    constructor(x,y){
+        this.body = Bodies.rectangle(x,y,100,100);
         this.image = loadImage("images/Running Boy.jpg");
        /*  camera.position.x = this.body.position.x;
         camera.position.y = this.body.position.y; */
@@ -8,7 +8,8 @@ class Player{
         World.add(world, this.body);
     }
     display(){
+        var pos= this.body.position;
         imageMode(CENTER);
-        image(this.image,50,400,this.image.width/4,this.image.height/4);
+        image(this.image,pos.x,pos.y,this.image.width/4,this.image.height/4);
     }
 }
